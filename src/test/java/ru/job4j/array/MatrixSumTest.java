@@ -29,10 +29,10 @@ public class MatrixSumTest {
     public void whenThree() {
         int[][] array = {
                 {1, 2, 1},
-                {1, 2, 0}
+                {1, 2, 1}
         };
         int result = MatrixSum.sum(array);
-        int expected = 7;
+        int expected = 8;
         assertThat(result).isEqualTo(expected);
     }
 }
