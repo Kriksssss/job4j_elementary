@@ -4,13 +4,22 @@ public class MatrixCheck {
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
         char k = 'X';
-        char t = ' ';
         for (int i = 0; i < board.length; i++) {
-            for (int cell = 0; cell < board[i].length; cell++) {
-                if (board[row][i] != k || board[i][cell] != t && board[i][cell] != k) {
+                if (board[row][i] != k) {
                     result = false;
                     break;
                 }
+            }
+        return result;
+    }
+
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        char k = 'X';
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][column] != k) {
+                result = false;
+                break;
             }
         }
         return result;
