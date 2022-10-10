@@ -5,9 +5,9 @@ public class MatrixCheck {
         boolean result = true;
         char k = 'X';
         char t = ' ';
-        for (row = 0; row < board.length; row++) {
-            for (int cell = 0; cell < board[row].length; cell++) {
-                if (board[row][cell] != k && board[row][cell] != t) {
+        for (int i = 0; i < board.length; i++) {
+            for (int cell = 0; cell < board[i].length; cell++) {
+                if (board[row][i] != k || board[i][cell] != t && board[i][cell] != k) {
                     result = false;
                     break;
                 }
