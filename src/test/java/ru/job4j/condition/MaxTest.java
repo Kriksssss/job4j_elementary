@@ -24,20 +24,23 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMax3To6Then6() {
+    public void whenMax3To6To1Then6() {
         int left = 3;
         int right = 6;
-        int result = Max.max(left, right);
+        int k = 1;
+        int result = Max.max(left, right, k);
         int expected = 6;
         assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    public void whenMax6To6Then6() {
+    public void whenMax6To6To10To20Then20() {
         int left = 6;
         int right = 6;
-        int result = Max.max(left, right);
-        int expected = 6;
+        int k = 10;
+        int x = 20;
+        int result = Max.max(left, right, k, x);
+        int expected = 20;
         assertThat(result).isEqualTo(expected);
     }
 }
